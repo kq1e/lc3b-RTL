@@ -36,9 +36,15 @@ module datapath(
     output [15:0] IR,
     output R
 );
-
-    reg[15:0] IR_temp;
-    reg[15:0] MAR;
+    reg [15:0] PC_temp;
+    reg [15:0] MDR_temp;
+    reg [15:0] MAR_temp;
+    reg [15:0] IR_temp;
+    wire N_temp;
+    wire Z_temp;
+    wire P_temp;
+    reg BEN;
+    
 
     wire SR1_out;
     wire SR2_out;
