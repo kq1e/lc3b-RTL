@@ -4,4 +4,5 @@ module LC3B_top(
     
     reg [15:0] PC;
     reg [15:0] IR;
+    
 endmodule
