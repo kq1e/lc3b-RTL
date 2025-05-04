@@ -5,16 +5,17 @@ module ALU(
     output [15:0] ALU_out
 );
 
-    reg [15:0] ALU_out_temp;
-
-    assign ALU_out = ALU_out_temp;
+    wire [15:0] ALU_ADD = A + B;
+    wire [15:0] ALU_AND = A & B;
+    wire [15:0] ALU_XOR = A ^ B;
+    wire [15:0] ALU_PASSA = A;
 
     always @(*) begin
         case(ALUK)
-            2'b00 : ALU_out_temp = A + B;
-            2'b01 : ALU_out_temp = A & B;
-            2'b10 : ALU_out_temp = A ^ B;
-            2'b11 : ALU_out_temp = A;
+            2'b00 : ALU_out = ALU_ADD;
+            2'b01 : ALU_out = ALU_AND;
+            2'b10 : ALU_out = ALU_XOR;
+            2'b11 : ALU_out = ALU_PASSA;
         endcase
     end
 endmodule

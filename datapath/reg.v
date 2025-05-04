@@ -5,8 +5,9 @@ module reg(
     input DRMUX,
     input SR1MUX,
     input SR2,
-    input [15:0] IR,
-    input [15:0] BUS,
+    input [11:9] IR,
+    
+    inout [15:0] BUS,
 
     output [15:0] SR1_out,
     output [15:0] SR2_out

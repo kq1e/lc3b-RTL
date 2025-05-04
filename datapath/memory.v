@@ -6,20 +6,21 @@ module memory(
     input rst,
     input [ADDR_WIDTH-1:0] ADDR,
     input we1, we0,
-    output R,
-    output [DATA_WIDTH-1] 
+    output r,
+    output [DATA_WIDTH-1] mem_out
 );
 
     reg [DATA_WIDTH-1:0] RAM [0:ADDR_WIDTH-1];
 
     initial begin
-        R = 0;
+        r = 0;
         for(integer j = 0; j < ADDR_WIDTH; j=j+1)
-            RAM[j] = 8'h0;
-
+            RAM[j] = 0;
     end
 
-    always @(*)
+    always @(*) begin
+        if
+    end
 
 
 
